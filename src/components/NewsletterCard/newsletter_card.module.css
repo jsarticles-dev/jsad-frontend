@@ -1,0 +1,38 @@
+.card__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+  border: 1px solid #b7b7b7;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  box-sizing: border-box;
+}
+
+.card__header {
+  font-size: 28px;
+  text-align: center;
+}
+
+.card__header--medium {
+  display: block;
+  font-weight: 300;
+}
+
+.card__header--bold--extra {
+  display: block;
+  font-weight: 800;
+}
+
+.card__date {
+  display: block;
+  color: #979797;
+  margin-top: 21px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.link {
+  text-align: center;
+}

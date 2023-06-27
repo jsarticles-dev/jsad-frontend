@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import styles from "./styles.module.css";
+import Link from "next/link";
 
 const validateEmail = (email: string) => {
   const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
@@ -48,7 +49,9 @@ export default function NewUserForm({
       {!doesUseInNavbar && (
         <div>
           <div className={styles.box}>
-            <span className={styles.box__link}>Let me see first</span>
+            <Link href='/newsletters' className={styles.box__link}>
+              Let me see first
+            </Link>
           </div>
         </div>
       )}

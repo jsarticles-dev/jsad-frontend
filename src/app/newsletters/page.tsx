@@ -1,9 +1,11 @@
+import NewsletterCard from "@/components/NewsletterCard/NewsletterCard";
 import NewsletterLayout from "./newsletterLayout";
+import styles from "@/app/newsletters/newsletter.module.css";
 
 export default function EmailsPage() {
   return (
     <NewsletterLayout>
-      <div>This page going to include all the emails</div>
+      <div className={styles.grid}></div>
     </NewsletterLayout>
   );
 }

@@ -4,7 +4,7 @@ import "./global.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "JSArciles.dev",
+  title: "JSArticles.dev",
 };
 
 export default function RootLayout({

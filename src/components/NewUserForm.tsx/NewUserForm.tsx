@@ -8,7 +8,11 @@ const validateEmail = (email: string) => {
   return emailRegex.test(email);
 };
 
-export default function NewUserForm() {
+export default function NewUserForm({
+  doesUseInNavbar,
+}: {
+  doesUseInNavbar?: boolean;
+}) {
   const [email, setEmail] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
 
@@ -29,21 +33,25 @@ export default function NewUserForm() {
   };
 
   return (
-    <div className={styles.form__container}>
-      <div className={styles.box__error}>{error}</div>
-      <input
-        className={styles.form__input}
-        onChange={handleEmailChange}
-        placeholder='Enter your e-mail'
-      />
-      <button className={styles.form__button} onClick={handleClick}>
-        Join Now
-      </button>
-      <div>
-        <div className={styles.box}>
-          <span className={styles.box__link}>Let me see first</span>
-        </div>
+    <>
+      <div className={styles.form__container}>
+        <div className={styles.box__error}>{error}</div>
+        <input
+          className={styles.form__input}
+          onChange={handleEmailChange}
+          placeholder='Enter your e-mail'
+        />
+        <button className={styles.form__button} onClick={handleClick}>
+          Join Now
+        </button>
       </div>
-    </div>
+      {!doesUseInNavbar && (
+        <div>
+          <div className={styles.box}>
+            <span className={styles.box__link}>Let me see first</span>
+          </div>
+        </div>
+      )}
+    </>
   );
 }

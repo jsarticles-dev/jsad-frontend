@@ -8,6 +8,9 @@
 .header {
   font-size: 49px;
   margin-bottom: 90px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 
 .horizontal {
@@ -24,4 +27,19 @@
 
 .form__container {
   width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__container {
+    display: block;
+  }
+  .header {
+    text-align: center;
+    font-size: 49px;
+    margin-bottom: 20px;
+  }
+
+  .form__container {
+    width: 100%;
+  }
 }

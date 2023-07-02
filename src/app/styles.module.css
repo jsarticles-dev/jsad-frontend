@@ -9,6 +9,7 @@
 .header {
   font-size: 49px;
   margin-bottom: 90px;
+  cursor: pointer;
 }
 
 .horizontal {
@@ -31,4 +32,14 @@
 
 .paragraph--bold {
   font-weight: 800;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .header {
+    margin-bottom: 30px;
+  }
 }

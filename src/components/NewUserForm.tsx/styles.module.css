@@ -36,3 +36,21 @@
   color: rgba(255, 0, 0, 0.821);
   margin-bottom: 10px;
 }
+
+@media screen and (max-width: 768px) {
+  .box__link {
+    color: #979797;
+
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .form__input {
+    margin-right: 15px;
+    width: 50%;
+  }
+
+  .form__button {
+    width: calc(100% - 53% - 35px);
+  }
+}

@@ -6,15 +6,23 @@ function setCookies(token: string) {
   cookies().set("cookie", token);
 }
 
-async function fetchAuthData(url: string) {
+interface IFetchParams {
+  url: string;
+  method: "POST" | "GET" | "PUT" | "DELETE";
+  body?: { [key: string]: any } | undefined;
+}
+
+async function fetchAuthData({ url, method, body }: IFetchParams) {
   const accessToken = cookies().get("cookie")?.value;
 
   if (accessToken) {
     const data = await fetch(url, {
-      method: "GET",
+      method: method || "GET",
       headers: {
         authorization: `Bearer ${accessToken}`,
+        "Content-Type": "application/json",
       },
+      body: JSON.stringify(body),
     });
 
     return data.json();

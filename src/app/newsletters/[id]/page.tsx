@@ -32,7 +32,7 @@ export default async function NewsletterContext({
             {dayjs(newsletter.dateOfDispatch).format("DD MMMM YYYY")}
           </span>
         </div>
-        {newsletter.content}
+        <div dangerouslySetInnerHTML={{ __html: newsletter.content  }} />
       </div>
     </NewsletterLayout>
   );

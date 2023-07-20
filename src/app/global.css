@@ -34,3 +34,15 @@ input {
     height: 100vh;
   }
 }
+
+.react-datepicker-wrapper,
+.react-datepicker__input-container,
+.react-datepicker__input-container input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+}
+
+.rich-text .ql-editor {
+  min-height: 18em;
+}

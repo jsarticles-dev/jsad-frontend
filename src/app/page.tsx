@@ -1,4 +1,4 @@
-import NewUserForm from "@/components/NewUserForm.tsx/NewUserForm";
+import NewUserForm from "@/components/NewUserForm/NewUserForm";
 import styles from "./styles.module.css";
 
 export default function Home() {

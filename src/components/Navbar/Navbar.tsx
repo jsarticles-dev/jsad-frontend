@@ -1,4 +1,4 @@
-import NewUserForm from "../NewUserForm.tsx/NewUserForm";
+import NewUserForm from "../NewUserForm/NewUserForm";
 import styles from "./navbar.module.css";
 import Link from "next/link";
 

@@ -17,7 +17,7 @@ button:active {
   background-color: #dbcb4c;
 }
 
-input {
+input:not([type="radio"]) {
   outline: none;
   height: 60px;
   border-radius: 10px;

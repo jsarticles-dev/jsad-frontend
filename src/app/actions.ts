@@ -8,7 +8,7 @@ function setCookies(token: string) {
 
 interface IFetchParams {
   url: string;
-  method: "POST" | "GET" | "PUT" | "DELETE";
+  method: "POST" | "GET" | "PUT" | "DELETE" | "PATCH";
   body?: { [key: string]: any } | undefined;
 }
 

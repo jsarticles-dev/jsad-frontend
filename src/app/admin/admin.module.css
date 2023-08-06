@@ -27,3 +27,7 @@
 .table__row:hover {
   background-color: #e6e6e6;
 }
+
+.button {
+  width: 100%;
+}

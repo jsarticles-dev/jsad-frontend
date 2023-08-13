@@ -6,11 +6,13 @@ interface NewsletterCardProps {
   number: number;
   date: Date;
   id: string;
+  isDashboardElement?: boolean;
 }
 export default function NewsletterCard({
   number,
   date,
   id,
+  isDashboardElement,
 }: NewsletterCardProps) {
   return (
     <div className={styles.card__container}>
@@ -21,8 +23,15 @@ export default function NewsletterCard({
           {dayjs(date).format("DD MMMM YYYY")}
         </span>
       </div>
-      <Link href={`/newsletters/${id}`} className={styles.link}>
-        {"See more ->"}
+      <Link
+        href={
+          isDashboardElement
+            ? `admin/dashboard/newsletters/${id}/edit`
+            : `/newsletters/${id}`
+        }
+        className={styles.link}
+      >
+        {"See more →"}
       </Link>
     </div>
   );

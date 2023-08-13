@@ -4,6 +4,7 @@ import styles from "@/components/LoginForm/loginform.module.css";
 import { useState } from "react";
 import axios from "axios";
 import { setCookies } from "@/app/actions";
+import { useRouter } from "next/navigation";
 
 interface ILoginForm {
   email: string;
@@ -12,6 +13,7 @@ interface ILoginForm {
 
 export default function LoginForm() {
   const [form, setForm] = useState<ILoginForm>({ email: "", password: "" });
+  const router = useRouter();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -32,6 +34,7 @@ export default function LoginForm() {
 
     if (response?.data?.success === true) {
       setCookies(response?.data?.data?.token);
+      router.push("/admin/dashboard");
     }
   };
 

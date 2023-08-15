@@ -1,4 +1,4 @@
-import Navbar from "../../components/Navbar/Navbar";
+import AdminNavbar from "@/components/AdminNavbar/AdminNavbar";
 import styles from "@/app/newsletters/newsletter.module.css";
 
 export default async function AdminLayout({
@@ -9,7 +9,7 @@ export default async function AdminLayout({
   return (
     <>
       <div className={styles.newsletter__layout__container}>
-        <Navbar isEmailSubscriptionFormActive={false} />
+        <AdminNavbar />
       </div>
       {children}
     </>

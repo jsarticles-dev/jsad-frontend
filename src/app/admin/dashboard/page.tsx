@@ -1,7 +1,7 @@
 import NewsletterCard from "@/components/NewsletterCard/NewsletterCard";
-import DashboardLayout from "./dashboardLayout";
 import styles from "@/app/admin/dashboard/dashboard.module.css";
 import { checkIsTokenValid } from "@/app/actions";
+import AdminLayout from "../adminLayout";
 
 const getNewsletters = async () => {
   const res = await fetch(`${process.env.API_URL}/newsletters/`, {
@@ -26,7 +26,7 @@ export default async function DashboardPage() {
   const newsletters = await getNewsletters();
 
   return (
-    <DashboardLayout>
+    <AdminLayout>
       <div className={styles.grid}>
         {newsletters.reverse().map((newsletter: Newsletter, index: number) => {
           return (
@@ -40,6 +40,6 @@ export default async function DashboardPage() {
           );
         })}
       </div>
-    </DashboardLayout>
+    </AdminLayout>
   );
 }

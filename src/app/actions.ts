@@ -47,4 +47,8 @@ const checkIsTokenValid = async () => {
   }
 };
 
-export { setCookies, fetchAuthData, checkIsTokenValid };
+const deleteCookie = (cookieName: string) => {
+  cookies().delete(cookieName);
+};
+
+export { setCookies, fetchAuthData, checkIsTokenValid, deleteCookie };

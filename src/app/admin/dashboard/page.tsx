@@ -36,6 +36,7 @@ export default async function DashboardPage() {
               id={newsletter._id}
               date={new Date(newsletter.dateOfDispatch)}
               number={newsletter.number}
+              isStatusTagActive
             />
           );
         })}

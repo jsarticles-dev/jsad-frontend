@@ -1,0 +1,25 @@
+.tag__container {
+  font-size: 18px;
+  padding: 3px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  text-align: center;
+}
+
+.error {
+  border-color: rgb(242, 167, 161);
+  background-color: rgb(253, 241, 240);
+  color: rgb(189, 46, 44);
+}
+
+.sent {
+  border-color: rgb(194, 233, 153);
+  background-color: rgb(248, 255, 238);
+  color: rgb(86, 156, 48);
+}
+
+.pending {
+  border-color: rgb(251, 230, 154);
+  background-color: rgb(254, 251, 232);
+  color: rgb(201, 139, 49);
+}

@@ -6,6 +6,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import style from "@/components/NewNewsletterForm/newNewsletter.module.css";
 import { fetchAuthData } from "@/app/actions";
+import { useRouter } from "next/navigation";
 
 interface INewNewsletterForm {
   content: string;
@@ -14,6 +15,8 @@ interface INewNewsletterForm {
 }
 
 export default function NewNewsletterForm() {
+  const router = useRouter();
+
   const [formState, setFormState] = useState<INewNewsletterForm>({
     content: "",
     dateOfDispatch: new Date(),
@@ -35,6 +38,8 @@ export default function NewNewsletterForm() {
       method: "POST",
       body: { ...formState },
     });
+
+    return router.push("/admin/dashboard");
   };
 
   return (

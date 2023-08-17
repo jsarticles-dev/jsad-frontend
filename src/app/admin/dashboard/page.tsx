@@ -1,6 +1,5 @@
 import NewsletterCard from "@/components/NewsletterCard/NewsletterCard";
 import styles from "@/app/admin/dashboard/dashboard.module.css";
-import { checkIsTokenValid } from "@/app/actions";
 import AdminLayout from "../adminLayout";
 
 const getNewsletters = async () => {
@@ -22,7 +21,6 @@ interface Newsletter {
 [];
 
 export default async function DashboardPage() {
-  await checkIsTokenValid();
   const newsletters = await getNewsletters();
 
   return (

@@ -1,4 +1,4 @@
-import { checkIsTokenValid, fetchAuthData } from "@/app/actions";
+import { fetchAuthData } from "@/app/actions";
 import AdminLayout from "../../adminLayout";
 import adminStyles from "@/app/admin/admin.module.css";
 import dayjs from "dayjs";
@@ -11,8 +11,6 @@ type UserType = {
 };
 
 export default async function UsersPage() {
-  await checkIsTokenValid();
-
   const users = await fetchAuthData({
     url: `${process.env.NEXT_PUBLIC_API_URL}/users`,
     method: "GET",
@@ -36,7 +34,7 @@ export default async function UsersPage() {
                   ).format("DD.MM.YYYY")}`}</td>
                   <td className={adminStyles.table__data}>{user.email}</td>
                   <td className={adminStyles.table__data}>
-                    <UserActionButtons userId={user._id}  />
+                    <UserActionButtons userId={user._id} />
                   </td>
                 </tr>
               );

@@ -7,6 +7,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import style from "@/components/NewNewsletterForm/newNewsletter.module.css";
 import { fetchAuthData } from "@/app/actions";
 import { useRouter } from "next/navigation";
+import toastMessage from "../ToastMessage/ToastMessage";
+import { ToastContainer } from "react-toastify";
 
 interface INewNewsletterForm {
   content: string;
@@ -38,12 +40,13 @@ export default function NewNewsletterForm() {
       method: "POST",
       body: { ...formState },
     });
-
-    return router.push("/admin/dashboard");
+    toastMessage.success("Newsletter added!");
+    return setTimeout(() => router.push("/admin/dashboard"), 2000);
   };
 
   return (
     <div className={style.form__wrapper}>
+      <ToastContainer />
       <div className={style.form__container}>
         <label className={style.form__label}>Header</label>
         <input

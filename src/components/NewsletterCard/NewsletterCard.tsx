@@ -56,7 +56,7 @@ export default function NewsletterCard({
       <Link
         href={
           isDashboardElement && checkIsEditingActive()
-            ? `admin/dashboard/newsletters/${id}/edit`
+            ? `/admin/dashboard/newsletters/${id}/edit`
             : `/newsletters/${id}`
         }
         className={styles.link}

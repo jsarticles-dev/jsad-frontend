@@ -23,6 +23,7 @@ interface Newsletter {
 export default async function DashboardPage() {
   const newsletters = await getNewsletters();
 
+
   return (
     <AdminLayout>
       <div className={styles.grid}>

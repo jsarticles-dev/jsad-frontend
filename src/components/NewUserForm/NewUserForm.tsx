@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
 import Link from "next/link";
+import toastMessage from "../ToastMessage/ToastMessage";
+import { ToastContainer } from "react-toastify";
 
 const validateEmail = (email: string) => {
   const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
@@ -28,6 +30,7 @@ export default function NewUserForm({
   const handleClick = () => {
     const isValid = validateEmail(email);
     if (isValid) {
+      toastMessage.success("Successfully joined!");
     } else {
       setError("This e-mail address is not valid!");
     }
@@ -35,6 +38,7 @@ export default function NewUserForm({
 
   return (
     <>
+      <ToastContainer />
       <div className={styles.form__container}>
         <div className={styles.box__error}>{error}</div>
         <input

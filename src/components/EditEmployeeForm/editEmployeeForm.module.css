@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form__submit__button {
+  margin-top: 40px;
+}

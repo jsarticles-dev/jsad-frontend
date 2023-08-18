@@ -1,0 +1,33 @@
+.table {
+  width: 100%;
+  background-color: white;
+  border-collapse: collapse;
+}
+
+.table__header {
+  border: 1px solid black;
+  text-align: center;
+  padding: 8px;
+  background-color: #f2f2f2;
+}
+
+.table__data {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.table__row {
+  background-color: white;
+}
+
+.table__row:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table__row:hover {
+  background-color: #e6e6e6;
+}
+
+.button {
+  width: 100%;
+}

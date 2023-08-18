@@ -1,0 +1,60 @@
+body {
+  padding-left: 115px;
+  padding-right: 115px;
+  height: 100vh;
+}
+
+button {
+  background-color: #f3e050;
+  border-radius: 10px;
+  height: 62px;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+button.danger {
+  background-color: rgb(249, 203, 203);
+  border: 1px solid red;
+  color: red;
+}
+
+button.danger:active {
+  background-color: red;
+  border: 1px solid rgb(249, 203, 203);
+  color: rgb(249, 203, 203);
+}
+
+button:active {
+  background-color: #dbcb4c;
+}
+
+input:not([type="radio"]) {
+  outline: none;
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid #b7b7b7;
+  background: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 20px;
+    height: 100vh;
+  }
+}
+
+.react-datepicker-wrapper,
+.react-datepicker__input-container,
+.react-datepicker__input-container input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+}
+
+.rich-text .ql-editor {
+  min-height: 18em;
+}

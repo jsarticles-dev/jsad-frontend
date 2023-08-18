@@ -1,0 +1,45 @@
+.wrapper {
+  display: flex;
+  height: 100%;
+  width: 70%;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header {
+  font-size: 49px;
+  margin-bottom: 90px;
+  cursor: pointer;
+}
+
+.horizontal {
+  margin-right: 80%;
+}
+
+.header--bold {
+  font-weight: 800;
+}
+
+.header--light {
+  display: block;
+  font-weight: 200;
+}
+
+.paragraph {
+  font-size: 20px;
+  margin-bottom: 79px;
+}
+
+.paragraph--bold {
+  font-weight: 800;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .header {
+    margin-bottom: 30px;
+  }
+}

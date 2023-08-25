@@ -1,0 +1,28 @@
+.drawer {
+  width: 40%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -40%;
+  background-color: #f0f0f0;
+  transition: right 0.3s ease;
+}
+
+.open {
+  right: 0;
+}
+
+.drawerContent {
+  padding: 16px;
+}
+
+.drawerButton {
+  padding: 8px;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  margin: 16px;
+  display: block;
+  height: 15px;
+  width: 15px;
+}

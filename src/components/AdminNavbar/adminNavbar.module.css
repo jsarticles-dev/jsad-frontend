@@ -1,0 +1,40 @@
+.navbar__container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.492);
+}
+
+.menu__item {
+  text-decoration: none;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.492);
+}
+
+.menu__item:hover {
+  color: black;
+}
+
+.header {
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+}
+
+.header--bold {
+  font-weight: 800;
+}
+
+.header--light {
+  font-weight: 200;
+}
+
+.danger {
+  cursor: pointer;
+  color: rgba(251, 83, 83, 0.492);
+}
+
+.danger:hover {
+  color: rgb(255, 0, 0);
+}

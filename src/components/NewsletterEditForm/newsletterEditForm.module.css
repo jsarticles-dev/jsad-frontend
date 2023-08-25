@@ -1,0 +1,28 @@
+.form__wrapper {
+  display: flex;
+}
+
+.form__container {
+  flex: 1 1 0px;
+}
+
+.form__button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form__container:first-child {
+  margin-right: 20px;
+}
+
+.form__label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form__input {
+  box-sizing: border-box;
+  width: 100%;
+}

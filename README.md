@@ -1,5 +1,4 @@
-<p align="center"><img width="344" alt="Screenshot 2023-08-23 at 13 30 26" src="https://github.com/jsarticles-dev/jsad-frontend/assets/20026295/ab3bf255-2df1-40ea-99e1-fafa9f9f7ab1">
-</p>
+<p align="center"><img width="344" alt="Screenshot 2023-08-23" src="https://github.com/jsarticles-dev/jsad-frontend/assets/20026295/174e177b-1c23-4f23-86d2-89839acd0797"></p>
 
 ## Introduction
 
